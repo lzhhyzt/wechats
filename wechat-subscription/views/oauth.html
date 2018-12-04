@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>热闹繁华的都市和静谧安静的乡村</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+</head>
+
+<body>
+  <h1>热闹繁华的都市和静谧安静的乡村</h1>
+  <p>Welcome to 热闹繁华的都市和静谧安静的乡村</p>
+  <p id="code"></p>
+  <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3742910000,2737153630&fm=15&gp=0.jpg" />
+</body>
+<script>
+  wx.config({
+    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: '', // 必填，公众号的唯一标识
+    timestamp: 0, // 必填，生成签名的时间戳
+    nonceStr: '', // 必填，生成签名的随机串
+    signature: '', // 必填，签名
+    jsApiList: [] // 必填，需要使用的JS接口列表
+  });
+
+  wx.ready(function () {
+    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+    console.log('验证成功');
+    // 验证当前的客户端版本是否支持指定的JS接口
+    wx.checkJsApi({
+      jsApiList: ['chooseImage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+      success: function (res) {
+        // 以键值对的形式返回，可用的api值true，不可用为false
+        // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+        console.log('可用的接口', res)
+      }
+    });
+  });
+
+  wx.error(function (res) {
+    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+    console.log('验证失败');
+  });
+
+  {
+    // 用户授权，获取用户信息
+    function mappingLink(str, key) {
+      let val = ""
+      let index = str.indexOf("?")
+      let substr = str.substring(index + 1)
+
+      let str_arr = substr.split("&")
+      for (var i = 0; i < str_arr.length; i++) {
+        var str_child_arr = str_arr[i].split("=")
+
+        if (str_child_arr[0] === key) {
+          val = str_child_arr[1]
+          break;
+        }
+      }
+      return val;
+    }
+
+    if (mappingLink(location.href, 'code')) {
+      var code = mappingLink(location.href, 'code')
+      console.log('获取code', code)
+      document.getElementById('code').innerText = code
+      let url = "http://e22772q348.iask.in/getCode?code=" + code
+      $.get(url, function (result) {
+        console.log(result)
+      });
+    }
+  }
+</script>
+
+</html>
