@@ -1,0 +1,27 @@
+<!--pages/movies/movies.wxml-->
+<import src="./templates/movie-list/movie-list-template.wxml" />
+<import src="./templates/movie-grid/movie-grid-template.wxml" />
+<import src="/templates/loading/loading-template.wxml" />
+
+<view>
+  <view class="search">
+    <icon class="search-img" type='search' size="13" color="#405f80"></icon>
+    <input class="search-input" type="text" placeholder='肖生克的救赎、你的名字' value="{{ inputText }}" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindChange" />
+    <image class="xx-img" wx:if="{{ searchPannelShow }}" src="/images/icons/xx.png" bindtap="onCancelImgTap"></image>
+  </view>
+  <view class='container' wx:if="{{ containerShow }}">
+    <view class="movie-template">
+      <template is="movieListTemplate" data="{{ ...inHot }}" />
+    </view>
+    <view class="movie-template">
+      <template is="movieListTemplate" data="{{ ...commingSoon }}" />
+    </view>
+    <view class="movie-template">
+      <template is="movieListTemplate" data="{{ ...top250 }}" />
+    </view>
+  </view>
+
+  <view class="search-pannel" wx:if="{{ searchPannelShow }}">
+    <template is="movieGridTemplate" data="{{ ...searchResult }}" />
+  </view>
+</view>

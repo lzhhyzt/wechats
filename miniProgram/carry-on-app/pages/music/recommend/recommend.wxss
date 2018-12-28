@@ -1,0 +1,61 @@
+/* pages/music/recommend/recommend.wxss */
+.recommend {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommend-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 30rpx 40rpx 20rpx 40rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-music,
+.item-separate,
+.item-author {
+  font-size: 30rpx;
+}
+
+.item-music {
+  display: inline-block;
+  width: 220rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-right: 30rpx;
+}
+
+.item-separate {
+  display: inline-block;
+  width: 60rpx;
+  text-align: center;
+  margin-right: 30rpx;
+}
+
+.item-author {
+  display: inline-block;
+  width: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-right: 60rpx;
+}
+
+.item-img {
+  text-align: right;
+}
+
+.img-play {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 40rpx;
+}
+
+.img-love {
+  width: 40rpx;
+  height: 40rpx;
+}

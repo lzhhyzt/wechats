@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "音乐",
+  "usingComponents": {
+    "newest-nusic": "./new/new",
+    "recommend-music": "./recommend/recommend",
+    "search-music": "./search/search",
+    "my-music": "./me/me",
+    "lyrics-controls": "./lyrics/lyrics"
+  }
+}

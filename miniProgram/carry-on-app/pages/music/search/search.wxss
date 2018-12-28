@@ -1,0 +1,149 @@
+/* pages/music/search/search.wxss */
+/*---搜索框---*/
+.search {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: inherit;
+  padding: 20rpx 30rpx;
+  background-color: rgb(240, 236, 236);
+}
+
+.box-input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10rpx 15rpx;
+  background-color: #fff;
+}
+
+.input-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 5rpx;
+  margin-right: 15rpx;
+}
+
+.input-box {
+  width: 560rpx;
+  height: 50rpx;
+  color: #000;
+  font-size: 32rpx;
+}
+/*---搜索框---*/
+
+
+/*---热门搜索---*/
+.search-hot {
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+}
+
+.hot-title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 10rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.music {
+  width: 56rpx;
+  height: 56rpx;
+  margin-right: 15rpx;
+  line-height: 56rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  vertical-align: middle;
+}
+
+.hot-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 10rpx 20rpx 10rpx 40rpx;
+}
+
+.content-tips {
+  font-size: 32rpx;
+  padding: 10rpx 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 30rpx;
+  border: 1px solid #1afa29;
+}
+
+/**---搜索结果---**/
+.search-result {
+  flex-direction: column;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 30rpx 40rpx 20rpx 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-music,
+.item-separate,
+.item-author {
+  font-size: 30rpx;
+}
+
+.item-music {
+  display: inline-block;
+  width: 200rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-right: 30rpx;
+}
+
+.item-separate {
+  display: inline-block;
+  width: 80rpx;
+  text-align: center;
+  margin-right: 40rpx;
+}
+
+.item-author {
+  display: inline-block;
+  width: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-right: 60rpx;
+}
+
+.item-img {
+  text-align: right;
+}
+
+.img-play {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 40rpx;
+}
+
+.img-love {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/**---搜索结果---**/

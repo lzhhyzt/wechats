@@ -1,0 +1,133 @@
+/* pages/weather/weather.wxss */
+
+page {
+  background: url(http://p92ugi2r9.bkt.clouddn.com/bg.jpg) no-repeat fixed top;
+  background-size: cover;
+}
+
+.weather {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background:rgba(155, 152, 152, 0.5);
+  color: #fff;
+}
+
+.weather-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx;
+}
+
+.location-avatar {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.content-city {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80rpx;
+}
+
+.temperatur-title {
+  color: #fff;
+  font-size: 150rpx;
+}
+
+.other-text {
+  font-size: 30rpx;
+}
+
+.weather-future {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.line {
+  border-top: 2px solid #fff;
+  width: 100%; 
+  margin-bottom: 20rpx;
+}
+
+.future-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30rpx;
+}
+
+.content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150rpx;
+  height: auto;
+  padding: 15rpx;
+  border: 1px solid #fff;
+  margin-right: 25rpx;
+}
+
+.future-img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.future-text {
+  font-size: 30rpx;
+}
+
+.weather-liveindex {
+  margin-top: 20rpx;
+  padding: 30rpx;
+  border: 1px solid #fff;
+}
+.liveindex-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.liveindex-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+.liveindex-item {
+  width:50%;
+  margin-bottom: 20rpx;
+}
+
+.item-img {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 30rpx;
+  line-height: 42rpx;
+  margin-left: 20rpx;
+}
+
+.item-text {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  vertical-align: middle;
+}

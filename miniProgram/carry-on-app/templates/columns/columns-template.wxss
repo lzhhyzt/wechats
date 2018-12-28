@@ -1,0 +1,28 @@
+/* templates/columns/columns-template.wxss */
+.columns {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26rpx 16rpx 26rpx 30rpx;
+}
+
+.column-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.column-text {
+  font-size: 34rpx;
+}
+
+.right {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 50rpx;
+}

@@ -1,0 +1,10 @@
+<!--templates/columns/columns-template.wxml-->
+<template name="columnTemplate">
+  <view class="columns">
+    <view>
+      <image class="column-icon" src='{{ icon }}'></image>
+      <text class="column-text">{{ title }}</text>
+    </view>
+    <image class="right" src='/images/icons/than.png'></image>
+  </view>
+</template>

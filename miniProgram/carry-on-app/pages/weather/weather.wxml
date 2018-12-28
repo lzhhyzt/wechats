@@ -1,0 +1,83 @@
+<!--pages/weather/weather.wxml-->
+<view class="weather">
+  <!--地理位置-->
+  <view class="weather-location">
+    <image class="location-avatar" src='/images/icons/location.png'></image>
+    <view class="location-content" data-locations="{{location}}" bindtap="searchLocation">
+      <view>
+        <text class="content-city">{{location.city}}</text>
+      </view>
+    </view>
+  </view>
+  <!--今天天气状况-->
+  <view class="weather-content">
+    <view class="content-temperature">
+      <text class="temperatur-title">{{weather[0].tmp_max}}℃</text>
+    </view>
+    <view class="content-other">
+      <text class="other-text">{{weather[0].cond_txt_d}} / {{weather[0].wind_dir}} / 相对湿度{{weather[0].hum}}%</text>
+    </view>
+    <view></view>
+  </view>
+  <!--未来三天天气状况-->
+  <view class="weather-future">
+    <view class="line"></view>
+    <view class="future-content">
+      <block wx:for="{{weather}}" wx:key="1">
+        <view class="content-item">
+          <view>
+            <text class="future-text">{{item.day}}</text>
+          </view>
+          <view>
+            <text class="future-text">{{item.date}}</text>
+          </view>
+          <view>
+            <image class="future-img" src="/images/weather/{{item.cond_code_d}}.png"></image>
+          </view>
+          <view>
+            <text class="future-text">{{item.cond_txt_d}}</text>
+          </view>
+          <view>
+            <text class="future-text">{{item.tmp_max}}℃</text>
+          </view>
+          <view>
+            <text class="future-text">{{item.wind_dir}}</text>
+          </view>
+          <view>
+            <text class="future-text">{{item.hum}}%</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!--生活指数-->
+    <view class="weather-liveindex">
+      <text class="liveindex-title">生活指数</text>
+      <view class="liveindex-content">
+        <view class="liveindex-item">
+          <image class="item-img" src="/images/weather/life/comfortable.png"></image>
+          <text class="item-text">{{liveIndex[0].brf}}</text>
+        </view>
+        <view class="liveindex-item">
+          <image class="item-img" src="/images/weather/life/car.png"></image>
+          <text class="item-text">{{liveIndex[6].brf}}洗车</text>
+        </view>
+        <view class="liveindex-item">
+          <image class="item-img" src="/images/weather/life/sport.png"></image>
+          <text class="item-text">{{liveIndex[3].brf}}运动</text>
+        </view>
+        <view class="liveindex-item">
+          <image class="item-img" src="/images/weather/life/rays.png"></image>
+          <text class="item-text">紫外线{{liveIndex[5].brf}}</text>
+        </view>
+        <view class="liveindex-item">
+          <image class="item-img" src="/images/weather/life/trip.png"></image>
+          <text class="item-text">{{liveIndex[4].brf}}旅游</text>
+        </view>
+        <view class="liveindex-item">
+          <image class="item-img" src="/images/weather/life/air.png"></image>
+          <text class="item-text">空气质量{{liveIndex[7].brf}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

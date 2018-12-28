@@ -1,0 +1,25 @@
+<!--pages/video/video.wxml-->
+<import src="/templates/loading/loading-template.wxml" />
+
+<view class="container">
+  <view class="swiperList">
+    <swiper indicator-dots autoplay circular>
+      <block wx:for="{{ swiperList }}" wx:key="item.id">
+        <swiper-item>
+          <image src='{{ item.cover }}' catchtap='onMovieTap' data-vid="{{ item.id }}"></image>
+          <text class="swiper-title">{{ item.title }}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="videoList">
+    <block wx:for="{{ videoList }}" wx:key="item.id">
+      <view class="video" catchtap='onMovieTap' data-vid="{{ item.id }}">
+        <text class="video-title">{{ item.title }}</text>
+        <text class="video-time">{{ item.time }}</text>
+        <image class="video-cover" src='{{ item.cover }}'></image>
+        <image class="video-play" src='/images/icons/video-play.png'></image>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/music/new/new.wxml-->
+<import src="/templates/loading/loading-template.wxml" />
+
+<view class="new">
+  <view class="new-list">
+    <block wx:for="{{songList}}" wx:key="1">
+      <view class="new-item">
+        <image class="item-img" src="http://imgcache.qq.com/music/photo/album_300/{{item.data.albumid % 100}}/300_albumpic_{{item.data.albumid}}_0.jpg" data-song="{{item.data}}" bindtap="playMusic"></image>
+        <text class="item-name">{{item.data.songname}}</text>
+      </view>
+    </block>
+  </view>
+</view>

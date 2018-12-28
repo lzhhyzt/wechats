@@ -1,0 +1,56 @@
+/* pages/setting/setting.wxss */
+@import '/templates/columns/columns-template.wxss';
+
+page {
+  background-color: #e6e6e6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+
+.baseinfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.name {
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height: 120rpx;
+}
+
+.tags {
+  font-size: 26rpx;
+}
+
+.others {
+  width: 760rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+
+.getUserInfo {
+  display: block;
+}

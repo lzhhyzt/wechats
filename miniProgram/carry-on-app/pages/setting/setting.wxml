@@ -1,0 +1,20 @@
+<!--pages/setting/setting.wxml-->
+<import src="/templates/columns/columns-template.wxml"/>
+
+<view class="container">
+  <view class="baseinfo">
+    <image class="avatar" src='{{ userInfo.avatarUrl }}'></image>
+    <view class="description">
+      <text class="name">{{ userInfo.nickName }}</text>
+      <text class="tags">地址：{{ userInfo.province }}{{ userInfo.city }}</text>
+    </view>
+  </view>
+
+  <view class="others">
+    <block wx:for="{{ columns }}" wx:key="1">
+      <view>
+        <template is="columnTemplate" data="{{ ...item }}"/>
+      </view>
+    </block>
+  </view>
+</view>

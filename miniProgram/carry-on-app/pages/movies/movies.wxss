@@ -1,0 +1,48 @@
+/* pages/movies/movies.wxss */
+@import "./templates/movie-list/movie-list-template.wxss";
+@import "./templates/movie-grid/movie-grid-template.wxss";
+@import "/templates/loading/loading-template.wxss";
+
+.container {
+  background-color: #f2f2f2;
+}
+
+.movie-template {
+  margin-bottom: 20rpx;
+}
+
+.search {
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-img {
+  margin: auto 0 auto 20rpx;
+}
+
+.search-input {
+  height: 100%;
+  width: 600rpx;
+  margin-left: 20px;
+  font-size: 30rpx;
+}
+
+.placeholder {
+  font-size: 24rpx;
+  color: #d1d1d1;
+  margin-left: 20rpx;
+}
+
+.search-pannel {
+  position: absolute;
+  top: 80rpx;
+}
+
+.xx-img {
+  height: 30rpx;
+  width: 30rpx;
+  margin: auto 0 auto 10rpx;
+}

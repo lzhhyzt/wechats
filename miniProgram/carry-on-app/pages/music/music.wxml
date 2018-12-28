@@ -1,0 +1,49 @@
+<!--pages/music/music.wxml-->
+<view class="music">
+  <!--导航条-->
+  <view class="music-navbar">
+    <view wx:for="{{navbar}}" data-idx="{{index}}"  class="navbar-item item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">
+      <image class="navbar-icon" src="{{currentTab==index ? item.img_on : item.img_off}}"></image>
+      <text class="ntext">
+      {{item.title}}
+      </text>
+    </view>
+  </view>
+
+  <!--音乐详情-->
+  <view class="music-content" >
+    <view class="music-list" hidden="{{currentTab !== 0}}">
+      <newest-nusic bind:showcontrollers="showMusicControls"></newest-nusic>
+    </view>
+    <view class="music-list" hidden="{{currentTab !== 1}}">
+      <recommend-music bind:showcontrollers="showMusicControls" bind:collectlovelist="loveMusicList"></recommend-music>
+    </view>
+    <view class="music-list" hidden="{{currentTab !== 2}}">
+      <search-music bind:showcontrollers="showMusicControls"></search-music>
+    </view>
+    <view class="music-list" hidden="{{currentTab !== 3}}">
+      <my-music bind:showcontrollers="showMusicControls"></my-music>
+    </view>
+  </view>
+
+  <!--音乐播放信息面板-->
+  <view class="music-controls" style="display: {{ constrolsIsShow? 'flex':'none' }}">
+    <image class="controls-avatar {{ isPlay? 'rotates-running':'rotates-pause' }}" src="http://imgcache.qq.com/music/photo/album_300/{{ musicInfo.albumid % 100 }}/300_albumpic_{{ musicInfo.albumid }}_0.jpg" data-music="{{ musicInfo }}" bindtap="enterLyricPage"></image>
+    <text class="controls-songname">{{ musicInfo.songname }}</text>
+    <text class="controls-author">{{ musicInfo.singer[0].name }}</text>
+    <image class="controls-play" src="{{ isPlay? '/images/icons/stop.png': '/images/icons/play.png' }}" bindtap="playorpause"></image>
+    <view class="controls-cancel" bindtap="hiddenControls">
+      <text class="controls-cancel-text">×</text>
+    </view>
+  </view>
+
+  <!--歌词面板-->
+  <view class="music-lyrics" style="display: {{ isShowLyrics? 'flex':'none' }}">
+    <lyrics-controls music-info="{{ musicInfo }}" play-status="{{ isPlay }}" love-status="{{ isLove }}"
+    music-lycris="{{ lycrisShort }}" bind:hideLyricsControls="hideLyricsPane"  bind:playPauseMusic="playorpause"/>
+    <!--进度条-->
+    <view class="lycris-progress">
+      <progress percent="{{ schedule }}" stroke-width="1" />
+    </view>  
+  </view>
+</view>

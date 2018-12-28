@@ -1,0 +1,104 @@
+/* pages/music/lyrics/lyrics.wxss */
+.lyric {
+  width: 100vw;
+  height: 96.9vh;
+  padding: 30rpx 0 0 0;
+  background-color: #000;
+}
+
+.lyric-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+}
+
+.top-return {
+  width: 50rpx;
+  height: 50rpx;
+} 
+
+.top-title {
+  display: inline-block;
+  width: 400rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.top-love {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.lyric-center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100rpx 0;
+}
+
+@keyframes rotation{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+
+.center-img {
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 50%;
+  border: 20rpx solid rgb(148, 146, 146);
+  transform: rotate(360deg);
+  animation: rotation 10s linear infinite;
+  box-shadow: 0 0 5px 5px rgb(59, 58, 58);
+}
+
+.rotates-running {
+  animation-play-state: running; /**动画运行**/
+}
+
+.rotates-pause {
+  animation-play-state: paused; /**动画暂停**/
+}
+
+.center-play {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/**----歌词----**/
+.lyric-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.top-sentence {
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.middle-sentence {
+  font-size: 30rpx;
+  color: rgb(26, 212, 9);
+  text-align: center;
+}
+
+.bottom-sentence {
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+}
+
+/**----歌词----**/

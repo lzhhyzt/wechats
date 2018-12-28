@@ -1,0 +1,18 @@
+<!--pages/weather/location-search/location-search.wxml-->
+<view class="location-search">
+  <!--搜索框-->
+  <view class="search-box">
+    <view class="box-input">
+      <image class="input-img" src="/images/icons/search.png" />
+      <input class="input-box" placeholder="输入城市" confirm-type="搜索" bindinput="inputValue" bindconfirm="searchLocation" />
+    </view>
+  </view>
+
+  <!--当前定位-->
+  <view class="current-location" style="display: {{ isShowCurrentLocation? 'block':'none' }}" bindtap="navigationBackPage">
+    <view>
+      <text class="current-title">当前城市</text>
+      <text class="current-text">{{currentLocation.city}}</text>
+    </view>
+  </view>
+</view>

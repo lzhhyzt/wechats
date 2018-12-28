@@ -1,0 +1,39 @@
+<!--pages/music/search/search.wxml-->
+<view class="search">
+  <view class="search-box">
+    <view class="box-input">
+      <image class="input-img" src="/images/icons/search.png" />
+      <input class="input-box" placeholder="体面" confirm-type="搜索"  bindinput="inputValue" bindconfirm="searchMusic"/>
+    </view>
+  </view>
+  <view class="search-hot" style="display: {{ isShowSearchResult? 'none':'flex' }}">
+    <view class="hot-title">
+      <image src='/images/music/doller.png' class="music"/>
+      <text class="title">
+        随便听听
+      </text>
+    </view>
+    <view class="hot-content">
+      <block wx:for="{{tips}}" wx:key="1">
+        <view class="content-tips" data-tip="{{item}}" bindtap="searchTab">
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!--搜索结果-->
+  <view class="search-result" style="display: {{ isShowSearchResult? 'flex':'none' }}">
+    <block wx:for="{{searchList}}" wx:key="3">
+      <view class="result-item">
+        <text class="item-music">{{item.name}}</text>
+        <text class="item-separate">-</text>
+        <text class="item-author">{{item.singer}}</text>
+        <view class="item-img">
+          <image src='/images/music/play.png' class="img-play" data-song="{{item}}" bindtap="isPlayMusic"></image>
+          <image src='{{ item.isLove? "/images/music/love.png":"/images/music/no-love.png"}}'class="img-love" data-single="{{item}}" bindtap="isLoveMusic"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

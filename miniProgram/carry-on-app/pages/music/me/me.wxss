@@ -1,0 +1,97 @@
+/* pages/music/me/me.wxss */
+@import '/templates/columns/columns-template.wxss';
+
+.me-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.column-icon {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.column-text {
+  color: #515151;
+  font-size: 34rpx;
+}
+
+.right {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 50rpx;
+}
+
+/**---喜欢音乐列表---**/
+.me-love {
+  flex-direction: column;
+}
+
+.love-return {
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.return-img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.lovelist-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 30rpx 40rpx 20rpx 40rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-music,
+.item-separate,
+.item-author {
+  font-size: 30rpx;
+}
+
+.item-music {
+  display: inline-block;
+  width: 220rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-right: 30rpx;
+}
+
+.item-separate {
+  display: inline-block;
+  width: 60rpx;
+  text-align: center;
+  margin-right: 30rpx;
+}
+
+.item-author {
+  display: inline-block;
+  width: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-right: 60rpx;
+}
+
+.item-img {
+  text-align: right;
+}
+
+.img-play {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 40rpx;
+}
+
+.img-love {
+  width: 40rpx;
+  height: 40rpx;
+}
+/**---喜欢音乐列表---**/
+

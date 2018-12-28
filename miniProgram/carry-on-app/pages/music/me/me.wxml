@@ -1,0 +1,32 @@
+<!--pages/music/me/me.wxml-->
+<import src="/templates/columns/columns-template.wxml"/>
+
+<view class="me">
+  <view style="display: {{ isShow? 'none':'block' }}">
+    <view class="me-item" bindtap='loveMusic'>
+      <template is="columnTemplate" data="{{ ...columns[0] }}"/>
+    </view>
+    <view class="me-item" bindtap='download'>
+      <template is="columnTemplate" data="{{ ...columns[1] }}"/>
+    </view>
+  </view>
+  <!--喜欢音乐列表-->
+  <view class="me-love" style="display: {{ isShow? 'flex':'none' }}">
+    <view class="love-return">
+      <image class="return-img" src="/images/icons/return.png" bindtap='loveMusic'></image>
+    </view>
+    <view class="lovelist">
+      <block wx:for="{{ loveList }}" wx:key="1">
+        <view class="lovelist-item">
+          <text class="item-music">{{item.songname}}</text>
+          <text class="item-separate">-</text>
+          <text class="item-author">{{item.singer}}</text>
+          <view class="item-img">
+            <image src='/images/music/play.png' class="img-play" data-song="{{item}}" bindtap="isPlayMusic"></image>
+            <image src="/images/music/love.png" class="img-love" data-sid="{{item.songid}}" bindtap="removeLoveMusic"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

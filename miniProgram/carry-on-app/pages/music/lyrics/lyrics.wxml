@@ -1,0 +1,23 @@
+<!--pages/music/lyrics/lyrics.wxml-->
+<view class="lyric">
+  <view class="lyric-top">
+    <image class="top-return" src="/images/music/return.png" bindtap="returnForward"></image>
+    <text class="top-title">{{ musicInfo.songname }}</text>
+    <image class="top-love" src="{{ isLove? '/images/music/love.png':'/images/music/no-love2.png' }}" bindtap="isLoveForMusic"></image>
+  </view>
+  
+  <!--专辑图片-->
+  <view class="lyric-center">
+    <image class="center-img {{ isPlay? 'rotates-running':'rotates-pause' }}" src="http://imgcache.qq.com/music/photo/album_300/{{ musicInfo.albumid % 100 }}/300_albumpic_{{ musicInfo.albumid }}_0.jpg"></image>
+    <image class="center-play" src="{{ isPlay? '/images/icons/video-pause.png': '/images/icons/video-play.png'}}" bindtap="changePlayStatus"></image>
+  </view>
+
+  <!--歌词-->
+  <view class="lyric-bottom">
+    <text class="top-sentence">{{ musicLycris.forward }}</text>
+    <text class="middle-sentence">{{ musicLycris.current }}</text>
+    <text class="bottom-sentence">{{ musicLycris.backward }}</text>
+  </view>
+
+</view>
+

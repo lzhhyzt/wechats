@@ -1,0 +1,42 @@
+/* pages/music/new/new.wxss */
+@import "/templates/loading/loading-template.wxss";
+
+.new {
+  padding: 34rpx 0;
+}
+
+.new-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.new-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 140rpx;
+  height: auto;
+  margin-left: 36rpx;
+  margin-bottom: 30rpx;
+}
+
+.item-img {
+ width: 140rpx;
+ height: 140rpx;
+ margin-bottom: 20rpx;
+ border-radius: 15rpx;
+ box-shadow: 5rpx 5rpx  5rpx #ccc;
+}
+
+.item-name {
+  display: block;
+  width: 140rpx;
+  font-size: 26rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

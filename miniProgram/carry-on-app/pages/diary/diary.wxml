@@ -1,0 +1,7 @@
+<!--pages/diary/diary.wxml-->
+<form>
+  <input bindtap="clickinput" placeholder='456456'/>
+  <button bindtap='clickbutton'>123123</button>
+</form>
+
+<text>{{text}}</text>

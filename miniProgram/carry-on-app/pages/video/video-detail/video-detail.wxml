@@ -1,0 +1,20 @@
+<!--pages/video/video-detail/video-detail.wxml-->
+ <view class="container">
+  <view class="video">
+    <video class="video-content" src='{{ video.url }}' controls="{{ true }}" poster="{{ video.cover }}"></video>
+    <text class="video-title">{{ video.title }}</text>
+    <text class="video-time">发布时间：{{ video.time }}</text>
+  </view>
+  <text class="recommend">其他推荐</text>
+  <view class="others">
+    <block wx:for="{{ recommentList }}" wx:key="1">
+      <view class="other-video" catchtap='onMovieTap' data-vid="{{ item.id }}">
+        <image class="other-video-cover" src='{{ item.cover }}'></image>
+        <view class="other-video-text">
+          <text class="title">{{ item.title }}</text>
+          <text class="time" decode='{{ true }}'>{{ item.time }}  &nbsp;&nbsp; {{ item.comment }}评论</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

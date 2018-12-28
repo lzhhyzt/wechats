@@ -1,0 +1,14 @@
+<!--pages/music/recommend/recommend.wxml-->
+<view class="recommend">
+  <block wx:for="{{ list }}" wx:key="1">
+    <view class="recommend-item">
+      <text class="item-music">{{item.data.songname}}</text>
+      <text class="item-separate">-</text>
+      <text class="item-author">{{item.data.singer[0].name}}</text>
+      <view class="item-img">
+        <image src='/images/music/play.png' class="img-play" data-song="{{item.data}}" bindtap="isPlayMusic"></image>
+        <image src='{{ item.isLove? "/images/music/love.png":"/images/music/no-love.png"}}'class="img-love" data-single="{{item}}" bindtap="isLoveMusic"></image>
+      </view>
+    </view>
+  </block>
+</view>

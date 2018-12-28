@@ -1,0 +1,57 @@
+/* pages/weather/location-search/location-search.wxss */
+/*---搜索框---*/
+.location-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: inherit;
+  padding: 20rpx 30rpx;
+  background-color: rgb(240, 236, 236);
+}
+
+.box-input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10rpx 15rpx;
+  background-color: #fff;
+}
+
+.input-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 5rpx;
+  margin-right: 15rpx;
+}
+
+.input-box {
+  width: 560rpx;
+  height: 50rpx;
+  color: #000;
+  font-size: 32rpx;
+}
+/*---搜索框---*/
+
+/*---当前定位---*/
+.current-location {
+  margin: 40rpx 30rpx 0 30rpx;
+  padding: 20rpx 30rpx;
+  background-color: rgb(240, 236, 236);
+}
+
+.current-title {
+  color: #999;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+
+.current-text {
+  font-size: 28rpx;
+  margin-right: 15rpx;
+}
+/*---当前定位---*/

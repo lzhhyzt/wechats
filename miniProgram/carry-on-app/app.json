@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/movies/movies",
+    "pages/diary/diary",
+	  "pages/video/video",
+    "pages/music/music",
+    "pages/weather/weather",
+    "pages/setting/setting",
+    "pages/movies/more-movies/more-movies",
+    "pages/movies/movie-detail/movie-detail",
+    "pages/video/video-detail/video-detail",
+    "pages/weather/location-search/location-search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2DC799"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "selectedColor": "#2DC799",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "天气",
+        "iconPath": "/images/tabs/weather-off.png",
+        "selectedIconPath": "/images/tabs/weather-on2.png"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐",
+        "iconPath": "/images/tabs/music-off.png",
+        "selectedIconPath": "/images/tabs/music-on2.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "短视频",
+        "iconPath": "/images/tabs/video-off.png",
+        "selectedIconPath": "/images/tabs/video-on2.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "/images/tabs/movie-off.png",
+        "selectedIconPath": "/images/tabs/movie-on.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "/images/tabs/setting-off.png",
+        "selectedIconPath": "/images/tabs/setting-on2.png"
+      }
+    ]
+  }
+}

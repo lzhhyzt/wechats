@@ -1,0 +1,13 @@
+/* pages/diary/diary.wxss */
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #ff0;
+}
+
+input {
+  height: 100rpx;
+  background-color: #f00;
+}
